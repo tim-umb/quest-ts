@@ -34,7 +34,7 @@ const SignOn1: any = styled('div')(({ theme }: any) => ({
   position: `relative`,
   isolation: `isolate`,
   flexDirection: `column`,
-  width: `327px`,
+  width: '100%',
   justifyContent: `flex-start`,
   alignItems: `center`,
   padding: `24px`,
