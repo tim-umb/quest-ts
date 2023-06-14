@@ -113,6 +113,7 @@ const Frame2: any = styled('div')({
 
 const Link1: any = styled(MUILink)(({ theme }: any) => ({
   margin: `0px`,
+  color: `rgba(16, 84, 138, 1)`,
   fontStyle: `normal`,
   fontFamily: `Roboto`,
   fontWeight: `400`,
@@ -125,6 +126,7 @@ const Link1: any = styled(MUILink)(({ theme }: any) => ({
 
 const Link2: any = styled(MUILink)(({ theme }: any) => ({
   margin: `4px 0px 0px 0px`,
+  color: `rgba(16, 84, 138, 1)`,
   fontStyle: `normal`,
   fontFamily: `Roboto`,
   fontWeight: `400`,
@@ -138,6 +140,7 @@ const Link2: any = styled(MUILink)(({ theme }: any) => ({
 const Button1: any = styled(Button)(({ theme }: any) => ({
   alignSelf: `stretch`,
   margin: `16px 0px 0px 0px`,
+  color: `rgba(255, 255, 255, 1)`,
   fontStyle: `normal`,
   fontFamily: `Roboto`,
   fontWeight: `500`,
@@ -150,6 +153,7 @@ const Button1: any = styled(Button)(({ theme }: any) => ({
 
 const Link3: any = styled(MUILink)(({ theme }: any) => ({
   margin: `16px 0px 0px 0px`,
+  color: `rgba(16, 84, 138, 1)`,
   fontStyle: `normal`,
   fontFamily: `Roboto`,
   fontWeight: `400`,
@@ -165,10 +169,10 @@ function SignOn(props: SignOnProps): JSX.Element {
 
   return (
     <SignOn1 className={props.className}>
-      <Typography1 variant={'body1'} gutterBottom={false} gutterBottom={false}>
+      <Typography1 variant={'body1'} gutterBottom={false}>
         {'LOGO'}
       </Typography1>
-      <Typography2 variant={'body1'} gutterBottom={false} gutterBottom={false}>
+      <Typography2 variant={'body1'} gutterBottom={false}>
         {'Sign on with user name and password'}
       </Typography2>
       <TextField1
@@ -176,8 +180,6 @@ function SignOn(props: SignOnProps): JSX.Element {
         disabled={true}
         size={'small'}
         label={'Username'}
-        variant={'outlined'}
-        size={'small'}
         value={data.username}
         onChange={fns.handleUsernameChange}
       />
@@ -186,8 +188,6 @@ function SignOn(props: SignOnProps): JSX.Element {
         disabled={false}
         size={'small'}
         label={'Password'}
-        variant={'outlined'}
-        size={'small'}
         type={'password'}
         onBlur={() => {
           if (data.password.length < 8) {
@@ -206,20 +206,10 @@ function SignOn(props: SignOnProps): JSX.Element {
         }}
       />
       <Frame2>
-        <Link1
-          underline={'always'}
-          color={'primary'}
-          underline={'always'}
-          color={'primary'}
-        >
+        <Link1 underline={'always'} color={'primary'}>
           {'Forgot username'}
         </Link1>
-        <Link2
-          underline={'always'}
-          color={'primary'}
-          underline={'always'}
-          color={'primary'}
-        >
+        <Link2 underline={'always'} color={'primary'}>
           {'Forgot password'}
         </Link2>
       </Frame2>
@@ -229,18 +219,10 @@ function SignOn(props: SignOnProps): JSX.Element {
         disabled={!data.isValidPassword}
         variant={'contained'}
         onClick={fns.handleSubmit}
-        size={'medium'}
-        color={'primary'}
-        variant={'contained'}
       >
         {'Submit'}
       </Button1>
-      <Link3
-        underline={'always'}
-        color={'primary'}
-        underline={'always'}
-        color={'primary'}
-      >
+      <Link3 underline={'always'} color={'primary'}>
         {'Sign on with SSO'}
       </Link3>
     </SignOn1>
