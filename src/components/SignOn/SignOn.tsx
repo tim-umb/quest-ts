@@ -22,7 +22,6 @@ import {
   Button,
 } from '@mui/material';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
-import { Helmet } from 'react-helmet-async';
 import { styled } from '@mui/material/styles';
 import { SignOnProps } from 'src/types';
 import useSignOn from 'src/components/SignOn/useSignOn';
@@ -166,9 +165,6 @@ function SignOn(props: SignOnProps): JSX.Element {
 
   return (
     <SignOn1 className={props.className}>
-      <Helmet>
-        <title>Sign on</title>
-      </Helmet>
       <Typography1 variant={'body1'} gutterBottom={false} gutterBottom={false}>
         {'LOGO'}
       </Typography1>
