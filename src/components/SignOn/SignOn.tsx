@@ -34,7 +34,7 @@ const SignOn1: any = styled('div')(({ theme }: any) => ({
   position: `relative`,
   isolation: `isolate`,
   flexDirection: `column`,
-  width: '100%',
+  width: `327px`,
   justifyContent: `flex-start`,
   alignItems: `center`,
   padding: `24px`,
@@ -165,10 +165,10 @@ function SignOn(props: SignOnProps): JSX.Element {
 
   return (
     <SignOn1 className={props.className}>
-      <Typography1 variant={'body1'} gutterBottom={false}>
+      <Typography1 variant={'body1'} gutterBottom={false} gutterBottom={false}>
         {'LOGO'}
       </Typography1>
-      <Typography2 variant={'body1'} gutterBottom={false}>
+      <Typography2 variant={'body1'} gutterBottom={false} gutterBottom={false}>
         {'Sign on with user name and password'}
       </Typography2>
       <TextField1
@@ -176,11 +176,15 @@ function SignOn(props: SignOnProps): JSX.Element {
         disabled={true}
         size={'small'}
         label={'Username'}
+        variant={'outlined'}
+        size={'small'}
         value={data.username}
         onChange={fns.handleUsernameChange}
       />
       <TextField2
+        variant={'outlined'}
         disabled={false}
+        size={'small'}
         label={'Password'}
         variant={'outlined'}
         size={'small'}
@@ -205,10 +209,14 @@ function SignOn(props: SignOnProps): JSX.Element {
         <Link1
           underline={'always'}
           color={'primary'}
+          underline={'always'}
+          color={'primary'}
         >
           {'Forgot username'}
         </Link1>
         <Link2
+          underline={'always'}
+          color={'primary'}
           underline={'always'}
           color={'primary'}
         >
@@ -221,10 +229,15 @@ function SignOn(props: SignOnProps): JSX.Element {
         disabled={!data.isValidPassword}
         variant={'contained'}
         onClick={fns.handleSubmit}
+        size={'medium'}
+        color={'primary'}
+        variant={'contained'}
       >
         {'Submit'}
       </Button1>
       <Link3
+        underline={'always'}
+        color={'primary'}
         underline={'always'}
         color={'primary'}
       >
