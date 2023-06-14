@@ -34,7 +34,7 @@ const SignOn1: any = styled('div')(({ theme }: any) => ({
   position: `relative`,
   isolation: `isolate`,
   flexDirection: `column`,
-  width: '100%',
+  width: `327px`,
   justifyContent: `flex-start`,
   alignItems: `center`,
   padding: `24px`,
@@ -102,8 +102,8 @@ const Frame2: any = styled('div')({
   display: `flex`,
   position: `relative`,
   isolation: `isolate`,
-  flexDirection: `column`,
-  justifyContent: `flex-start`,
+  flexDirection: `row`,
+  justifyContent: `space-between`,
   alignItems: `flex-start`,
   padding: `0px`,
   boxSizing: `border-box`,
@@ -125,7 +125,7 @@ const Link1: any = styled(MUILink)(({ theme }: any) => ({
 }));
 
 const Link2: any = styled(MUILink)(({ theme }: any) => ({
-  margin: `4px 0px 0px 0px`,
+  margin: `0px`,
   color: `rgba(16, 84, 138, 1)`,
   fontStyle: `normal`,
   fontFamily: `Roboto`,
